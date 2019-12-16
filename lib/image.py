@@ -25,8 +25,8 @@ https://github.com/casnortheast/microbit_stub/
 ------------------------------------------------------------------------------
 """
 import array
-from common import _rgb_24bit, _24bit_rgb
-from const import *
+from .common import _rgb_24bit, _24bit_rgb
+from .const import *
 
 """ ---------------------------------------------------------------------- """
 """ Images --------------------------------------------------------------- """
@@ -529,6 +529,6 @@ class StuduinoBitBuiltInImage(StuduinoBitImage):
     def set_pixel(self, x, y, value):
         raise TypeError("This image cannot be modified. Try copying it first.")
 
-from image_const1 import *
-from image_const2 import *
-from image_const3 import *
+from .image_const1 import *
+from .image_const2 import *
+from .image_const3 import *

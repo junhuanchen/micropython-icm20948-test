@@ -24,13 +24,13 @@ We used the script below as reference
 https://github.com/casnortheast/microbit_stub/
 ------------------------------------------------------------------------------
 """
-from image import StuduinoBitImage as Image
+from .image import StuduinoBitImage as Image
 from machine import Pin
 from neopixel import NeoPixel
 import time
 import _thread
-from const import *
-from common import _rgb_24bit, _24bit_rgb
+from .const import *
+from .common import _rgb_24bit, _24bit_rgb
 
 
 # for singleton pattern
@@ -42,7 +42,7 @@ __display = None
 def get_display_object():
     global __display
 
-    from dsply import __SBDisplay
+    from .dsply import __SBDisplay
 
     if __display is None:
         __display = __SBDisplay()

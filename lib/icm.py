@@ -1,11 +1,11 @@
 from micropython import const
+from . import const
 from time import sleep_ms
 from math import atan, sin, cos, pi, log
 import io
 import json
 
 CONFIG_FILE = 'config.json'
-
 MAGNETIC_OFFSET = 'magnetic_offset'
 MAGNETIC_SCALE = 'magnetic_scale'
 
@@ -17,8 +17,8 @@ __icm20948 = None
 def get_icm20948_object():
     global __icm20948
 
-    from icm20948 import ICM20948
-    from bus import get_i2c_object
+    from .icm20948 import ICM20948
+    from .bus import get_i2c_object
 
     if __icm20948 is None:
         __icm20948 = ICM20948(get_i2c_object())
@@ -139,7 +139,7 @@ class StuduinoBitCompass:
         # https://www.aichi-mi.com/home/%E9%9B%BB%E5%AD%90%E3%82%B3%E3%83%B3%E3%83%91%E3%82%B9/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%B9%E3%81%AE%E8%BC%83%E6%AD%A3%E3%82%BD%E3%83%95%E3%83%88%E3%81%AE%E5%8E%9F%E7%90%86/
         global CONFIG_FILE, MAGNETIC_OFFSET, MAGNETIC_OFFSET
 
-        from dsply import StuduinoBitDisplay
+        from .dsply import StuduinoBitDisplay
         display = StuduinoBitDisplay()
 
         self._offset = (0, 0, 0)

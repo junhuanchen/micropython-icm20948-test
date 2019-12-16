@@ -26,8 +26,8 @@ https://github.com/loboris/MicroPython_ESP32_psRAM_LoBo/blob/master/MicroPython_
 ------------------------------------------------------------------------------
 """
 from micropython import const
-from ak09916 import AK09916
-from icm_register_rw import ICMRegisterRW
+from .ak09916 import AK09916
+from .icm_register_rw import ICMRegisterRW
 
 __version__ = "0.2.0"
 

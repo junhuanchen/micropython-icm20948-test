@@ -28,7 +28,7 @@ https://github.com/loboris/MicroPython_ESP32_psRAM_LoBo/blob/master/MicroPython_
 import utime
 from machine import I2C, Pin
 from micropython import const
-from icm_register_rw import ICMRegisterRW
+from .icm_register_rw import ICMRegisterRW
 
 __version__ = "0.2.0"
 

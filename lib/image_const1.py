@@ -24,7 +24,7 @@ We used the script below as reference
 https://github.com/casnortheast/microbit_stub/
 ------------------------------------------------------------------------------
 """
-from image import StuduinoBitBuiltInImage
+from .image import StuduinoBitBuiltInImage
 
 """ Built-in images and character map """
 

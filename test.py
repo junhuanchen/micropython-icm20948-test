@@ -1,7 +1,7 @@
 
-from icm import *
+from lib.icm import *
 
-from dsply import StuduinoBitDisplay, Image
+from lib.dsply import StuduinoBitDisplay, Image
 display = StuduinoBitDisplay()
 
 from time import sleep_ms
@@ -11,13 +11,12 @@ print(compass.is_calibrated())
 # compass.clear_calibration()
 compass.calibrate()
 
-print(compass.get_values())
-
 scale = 22.5
 index = 0
 
 while True:
     head = compass.heading()
+    print(compass.get_values())
 
     if (head > (180 - scale)) and (head < (180 + scale)):
         index = 0

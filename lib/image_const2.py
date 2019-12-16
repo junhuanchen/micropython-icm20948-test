@@ -24,8 +24,8 @@ We used the script below as reference
 https://github.com/casnortheast/microbit_stub/
 ------------------------------------------------------------------------------
 """
-from image import StuduinoBitImage
-from image_const1 import *
+from .image import StuduinoBitImage
+from .image_const1 import *
 
 StuduinoBitImage.ANGRY = ANGRY
 StuduinoBitImage.BUTTERFLY = BUTTERFLY
